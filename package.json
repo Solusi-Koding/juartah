@@ -1,0 +1,41 @@
+{
+  "name": "juartah-upload",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Web kirim file desain untuk percetakan Shopee: upload tahan sinyal buruk ke Google Drive toko, dengan dashboard pesanan. Cloudflare Workers + D1.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Solusi-Koding/juartah.git"
+  },
+  "homepage": "https://juartah.my.id",
+  "engines": {
+    "node": ">=22"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "typecheck": "tsc -p tsconfig.json && tsc -p tsconfig.worker.json",
+    "test": "vitest run",
+    "mock": "node dev/mock-google.mjs",
+    "db:local": "wrangler d1 migrations apply DB --local",
+    "db:remote": "wrangler d1 migrations apply DB --remote",
+    "dev": "npm run build && npm run db:local && wrangler dev --port 8787",
+    "deploy": "npm run build && wrangler deploy"
+  },
+  "dependencies": {
+    "@fontsource-variable/archivo": "^5.3.0",
+    "@fontsource/courier-prime": "^5.3.0",
+    "cropperjs": "^1.6.2",
+    "hono": "^4.13.21",
+    "preact": "^11.2.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261123.1",
+    "@preact/preset-vite": "^2.10.6",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.1",
+    "wrangler": "^4.166.0"
+  }
+}

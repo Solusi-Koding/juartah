@@ -1,0 +1,9 @@
+node_modules
+dist
+.wrangler
+.dev.vars
+*.log
+client_secret*.json
+
+.DS_Store
+.playwright-mcp

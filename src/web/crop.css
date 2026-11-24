@@ -1,0 +1,25 @@
+/* Jarak 14px agar pegangan di tepi gambar tidak terpotong */
+.cropbox { height: min(58dvh, 34rem); padding: 14px; background: var(--ink); box-sizing: border-box; }
+.cropstage { height: 100%; }
+.cropbox img { display: block; max-width: 100%; }
+.cropbox .cropper-modal { background: var(--ink); opacity: 0.6; }
+.cropbox .cropper-view-box { outline: 2px solid var(--red); outline-color: var(--red); }
+.cropbox .cropper-dashed { border-color: #fff; opacity: 0.6; }
+.cropbox .cropper-center { display: none; }
+/* Area sentuh 28px untuk jari, tampilannya tetap kotak kecil */
+.cropbox .cropper-line { background: transparent; opacity: 1; }
+.cropbox .cropper-line.line-e { width: 28px; right: -14px; }
+.cropbox .cropper-line.line-w { width: 28px; left: -14px; }
+.cropbox .cropper-line.line-n { height: 28px; top: -14px; }
+.cropbox .cropper-line.line-s { height: 28px; bottom: -14px; }
+.cropbox .cropper-point { width: 28px; height: 28px; opacity: 1; background: transparent; margin: 0; }
+.cropbox .cropper-point::after { content: ""; position: absolute; inset: 8px; background: var(--paper); border: 2px solid var(--red); }
+.cropbox .cropper-point.point-se::before { display: none; }
+.cropbox .cropper-point.point-e { right: -14px; top: 50%; margin-top: -14px; }
+.cropbox .cropper-point.point-w { left: -14px; top: 50%; margin-top: -14px; }
+.cropbox .cropper-point.point-n { top: -14px; left: 50%; margin-left: -14px; }
+.cropbox .cropper-point.point-s { bottom: -14px; left: 50%; margin-left: -14px; }
+.cropbox .cropper-point.point-ne { top: -14px; right: -14px; }
+.cropbox .cropper-point.point-nw { top: -14px; left: -14px; }
+.cropbox .cropper-point.point-sw { bottom: -14px; left: -14px; }
+.cropbox .cropper-point.point-se { bottom: -14px; right: -14px; width: 28px; height: 28px; }

@@ -1,0 +1,9 @@
+# Salin menjadi .dev.vars untuk uji lokal. Nilai di bawah hanya untuk server tiruan (npm run mock).
+APP_URL=http://localhost:8787
+SESSION_SECRET=ganti-dengan-teks-acak-minimal-32-karakter
+OWNER_EMAILS=owner@example.test
+GOOGLE_CLIENT_ID=mock-client
+GOOGLE_CLIENT_SECRET=mock-secret
+GOOGLE_AUTH_URL=http://localhost:8799/o/oauth2/v2/auth
+GOOGLE_TOKEN_URL=http://localhost:8799/token
+GOOGLE_API_URL=http://localhost:8799
